@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Password</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container flex-center">
+      <div class="container-wrapper flex-direction">
+        <div class="copy">
+          <button id="copy">Copy Here</button>
+        </div>
+        <header>
+          <input
+            type="text"
+            name="text"
+            id="display"
+            readonly
+            placeholder="~*&dfkdGT$g"
+          />
+        </header>
+        <main class="flex-center">
+          <section class="items-wrapper">
+            <div class="list-items">
+              <input
+                type="checkbox"
+                name="uppercase"
+                id="uppercase"
+                checked
+                disabled
+              />
+              <label for="uppercase">Upper-case</label>
+            </div>
+            <div class="list-items">
+              <input
+                type="checkbox"
+                name="lowercase"
+                id="lowercase"
+                checked
+                disabled
+              />
+              <label for="lowercase">Lower-case</label>
+            </div>
+            <div class="list-items">
+              <input
+                type="checkbox"
+                name="number"
+                id="number"
+                value="number"
+                checked
+              />
+              <label for="number">Number</label>
+            </div>
+            <div class="list-items">
+              <input
+                type="checkbox"
+                name="symbol"
+                id="symbol"
+                value="symbol"
+                checked
+              />
+              <label for="symbol">Symbol</label>
+            </div>
+          </section>
+          <section class="items-wrapper">
+            <input
+              type="range"
+              name="range"
+              id="range"
+              value="8"
+              min="8"
+              max="16"
+            />
+            <label class="label"></label>
+          </section>
+        </main>
+        <div class="button">
+          <button type="submit" class="submit">Generate Now</button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
