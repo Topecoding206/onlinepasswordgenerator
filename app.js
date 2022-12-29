@@ -58,9 +58,13 @@ rangeValue.addEventListener("change", () => {
 });
 // this function copy to clipboard
 function copy() {
-  displayResult.select();
-  document.execCommand("copy");
-  alert("copied successfully");
+  if (displayResult.value === "") {
+    alert("Hey, I'm empty. Generate Now");
+  } else {
+    displayResult.select();
+    document.execCommand("copy");
+    alert("Password copied successfully");
+  }
 }
 submitButton.addEventListener("click", submit);
 copyText.addEventListener("click", copy);
